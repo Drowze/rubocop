@@ -52,6 +52,8 @@ module RuboCop
         output.puts
 
         per_cop_counts.each do |cop_name, count|
+          next unless RuboCop::Cop::Registry.global.find_by_cop_name(cop_name).support_autocorrect?
+
           output.puts "#{count.to_s.ljust(total_count.to_s.length + 2)}" \
                       "#{cop_name}\n"
         end
