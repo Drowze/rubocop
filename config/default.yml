@@ -3606,6 +3606,7 @@ Style/IdenticalConditionalBranches:
   Enabled: true
   VersionAdded: '0.36'
   VersionChanged: '1.16'
+  Safe: false
 
 Style/IfInsideElse:
   Description: 'Finds if nodes inside else, which can be converted to elsif.'
